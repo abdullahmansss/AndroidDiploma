@@ -1,33 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical"
-    >
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        >
+
+    <ImageView
+        android:id="@+id/android_image"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/android"
+        android:scaleType="centerCrop"
+        />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:text="Abdullah"
-        android:textSize="45sp"
-        android:background="#76D7C4"
-        android:gravity="center"
-        android:fontFamily="casual"
-        android:textStyle="bold|italic"
-        />
-
-    <Button
+        android:id="@+id/title_txt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="next"
-        android:textSize="30dp"
-        android:textColor="#fff"
-        android:background="#000"
+        android:text="Android App Developmnet"
+        android:layout_below="@id/android_image"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:textColor="#000"
         />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_txt"
+        >
 
-</LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:text="Android is a mobile operating system developed by Google, based on a modified version of the Linux kernel and other open source software and designed primarily for touchscreen mobile devices such as smartphones and tablets. In addition, Google has further developed Android TV for televisions, Android Auto for cars, and Wear OS for wrist watches, each with a specialized user interface. Variants of Android are also used on game consoles, digital cameras, PCs and other electronics. \n\n
+Initially developed by Android Inc., which Google bought in 2005, Android was unveiled in 2007, with the first commercial Android device launched in September 2008. The operating system has since gone through multiple major releases, with the current version being 9.0 Pie, released in August 2018. The core Android source code is known as Android Open Source Project (AOSP), and is primarily licensed under the Apache License.\n\n
+Android is also associated with a suite of proprietary software developed by Google, called Google Mobile Services[10] (GMS) that very frequently comes pre-installed in devices, which usually includes the Google Chrome web browser and Google Search and always includes core apps for services such as Gmail, as well as the application store and digital distribution platform Google Play, and associated development platform. These apps are licensed by manufacturers of Android devices certified under standards imposed by Google, but AOSP has been used as the basis of competing Android ecosystems, such as Amazon.com's Fire OS, which use their own equivalents to GMS.
+Android has been the best-selling OS worldwide on smartphones since 2011 and on tablets since 2013. As of May 2017, it has over two billion monthly active users, the largest installed base of any operating system, and as of June 2018, the Google Play store features over 3.3 million apps."
+            android:textColor="#000"
+            />
+
+    </ScrollView>
+
+</RelativeLayout>
